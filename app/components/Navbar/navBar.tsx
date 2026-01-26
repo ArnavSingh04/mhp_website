@@ -204,7 +204,7 @@ const Navbar = () => {
             menuOpen && !teamMenu && !compMenu ? "block" : "hidden"
           }`}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="bg-black px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {mobileNavigation.map((item, index) => (
               <MobileNavItem
                 key={index}
