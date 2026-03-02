@@ -21,7 +21,7 @@ type ApplicationCardProps = ApplicationCardInfo & {
   onMouseHover: () => void;
   onMouseLeave: () => void;
   key:number;
-  opens?: boolean;
+  opens?: boolean;  // whether this ApplicationCard opens or not, default is 'true'
 };
 
 export default function ApplicationCard({
@@ -32,10 +32,12 @@ export default function ApplicationCard({
   content,
   onMouseHover,
   onMouseLeave,
-  key
+  key,
+  opens = true,
 }: ApplicationCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // When the ApplicationCard opens
   const contentDisplay = (
     <div className="flex flex-col text-left overflow-y-auto" key={key}>
       {content.description} <br />
@@ -85,7 +87,7 @@ export default function ApplicationCard({
             </div>
 
             {/* Mobile info */}
-            {isOpen && (
+            {opens && isOpen && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -100,7 +102,7 @@ export default function ApplicationCard({
         {/* Info slide out */}
 
         {/* TODO: ALLOW FOR SCROLLING WITH WHEEL HERE */}
-        {isOpen && (
+        {opens && isOpen && (
           <AnimatePresence>
             <motion.div
               // onClick={() => setIsOpen((prev) => !prev)} TODO: add a collapse button
