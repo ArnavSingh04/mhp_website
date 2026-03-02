@@ -21,6 +21,7 @@ type ApplicationCardProps = ApplicationCardInfo & {
   onMouseHover: () => void;
   onMouseLeave: () => void;
   key:number;
+  opens?: boolean;
 };
 
 export default function ApplicationCard({
