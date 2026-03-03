@@ -1,5 +1,5 @@
 "use client";
-import ApplicationCard, { DisplayApplicationCard, FormEOI, ApplicationCardInfo } from "../components/ApplicationCarousel/ApplicationCard";
+import ApplicationCard, { DisplayApplicationCard, FormEOI, ApplicationCardInfo, DisplayApplicationCardInfo } from "../components/ApplicationCarousel/ApplicationCard";
 import ApplicationCarousel from "../components/ApplicationCarousel/ApplicationCarousel";
 import PageSection from "../components/PageSection";
 import Image from "next/image";
@@ -206,7 +206,7 @@ const teamApplications: ApplicationCardInfo[] = [
   }
 ];
 
-const teamApplications2026: ApplicationCardInfo[] = [
+const teamApplications2026: DisplayApplicationCardInfo[] = [
   {
     subteam: "All Teams",
     role: "Team Member ",

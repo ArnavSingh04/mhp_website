@@ -15,8 +15,15 @@ export type ApplicationCardInfo = {
   role?: string;
   img: string;
   formLink: string;
-  content?: ApplicationContent;
+  content: ApplicationContent;
 };
+
+export type DisplayApplicationCardInfo = {
+  subteam: string;
+  role?: string;
+  img: string;
+  formLink: string;
+}
 
 type ApplicationCardProps = ApplicationCardInfo & {
   onMouseHover: () => void;
@@ -147,8 +154,7 @@ export function DisplayApplicationCard({
   role,
   img,
   formLink,
-}: ApplicationCardInfo) {
-  console.log(subteam, role, img, formLink)
+}: DisplayApplicationCardInfo) {
   return (
     <div className="m-10 flex-shrink-0 flex flex-col items-center justify-center p-5 gap-5">
       <div className="relative h-[400px] w-[250px] rounded-xl overflow-hidden">
