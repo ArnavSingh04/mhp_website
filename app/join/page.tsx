@@ -217,7 +217,7 @@ const teamApplications2026: DisplayApplicationCardInfo[] = [
     subteam: "Human Resources",
     role: "HR member ",
     img: "/images/join_page/join_operations_website.jpg",
-    formLink: "https://docs.google.com/forms/d/e/1FAIpQLSdyXxqhT2Mgdkts7E2Rz5YLbm-vcjkkbAAKNvSkAs9YZ8wDcg/viewform?usp=header",
+    formLink: "https://docs.google.com/forms/d/e/1FAIpQLSf1V4W9iJp8c5RGUY_SFkd45-iON_gwCuYPrTtMxQyI-rlf6g/viewform?usp=header",
   }
 ]
 
