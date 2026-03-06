@@ -17,10 +17,19 @@ export type ApplicationCardInfo = {
   formLink: string;
   content: ApplicationContent;
 };
+
+export type DisplayApplicationCardInfo = {
+  subteam: string;
+  role?: string;
+  img: string;
+  formLink: string;
+}
+
 type ApplicationCardProps = ApplicationCardInfo & {
   onMouseHover: () => void;
   onMouseLeave: () => void;
-  key:number;
+  key:number; 
+  opens?: boolean;  // whether this ApplicationCard opens or not, default is 'true'
 };
 
 export default function ApplicationCard({
@@ -31,10 +40,12 @@ export default function ApplicationCard({
   content,
   onMouseHover,
   onMouseLeave,
-  key
+  key,
+  opens = true,
 }: ApplicationCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // When the ApplicationCard opens
   const contentDisplay = (
     <div className="flex flex-col text-left overflow-y-auto" key={key}>
       {content.description} <br />
@@ -84,7 +95,7 @@ export default function ApplicationCard({
             </div>
 
             {/* Mobile info */}
-            {isOpen && (
+            {opens && isOpen && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -99,7 +110,7 @@ export default function ApplicationCard({
         {/* Info slide out */}
 
         {/* TODO: ALLOW FOR SCROLLING WITH WHEEL HERE */}
-        {isOpen && (
+        {opens && isOpen && (
           <AnimatePresence>
             <motion.div
               // onClick={() => setIsOpen((prev) => !prev)} TODO: add a collapse button
@@ -126,4 +137,51 @@ export default function ApplicationCard({
       />
     </div>
   );
+}
+
+export function FormEOI() {
+  return (
+    <a href="https://forms.gle/U3Nn54SyTsi1WJYj7" target="_blank">
+      <button className=" font-Sansation font-semibold px-4 py-2 lg:px-16 lg:py-2 rounded-full border-2 bg-green text-black border-black hover:bg-black hover:text-white hover:border-white">
+        EOI Form
+      </button>
+    </a>
+  )            
+}
+
+export function DisplayApplicationCard({
+  subteam,
+  role,
+  img,
+  formLink,
+}: DisplayApplicationCardInfo) {
+  return (
+    <div className="m-10 flex-shrink-0 flex flex-col items-center justify-center p-5 gap-5">
+      <div className="relative h-[400px] w-[250px] rounded-xl overflow-hidden">
+        <Image
+          src={img}
+          width={800}
+          height={300}
+          alt={`Subteam ${subteam}`}
+          className="w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]/80 flex flex-col justify-end p-5">
+          <p className="font-bold text-lg text-white">
+            {role ?? "Team member"}
+          </p>
+          <p className="text-lg text-green">{subteam}</p>
+        </div>
+      </div>
+      
+      {/* Form button */}
+      <Button
+        text="Apply for this role"
+        theme={"dark"}
+        hrefString={formLink}
+        target={"_blank"}
+        className="relative"
+      />
+    </div>
+  )
 }

@@ -1,5 +1,5 @@
 "use client";
-import { ApplicationCardInfo } from "../components/ApplicationCarousel/ApplicationCard";
+import ApplicationCard, { DisplayApplicationCard, FormEOI, ApplicationCardInfo, DisplayApplicationCardInfo } from "../components/ApplicationCarousel/ApplicationCard";
 import ApplicationCarousel from "../components/ApplicationCarousel/ApplicationCarousel";
 import PageSection from "../components/PageSection";
 import Image from "next/image";
@@ -206,7 +206,22 @@ const teamApplications: ApplicationCardInfo[] = [
   }
 ];
 
-const IS_RECRUITING = false;
+const teamApplications2026: DisplayApplicationCardInfo[] = [
+  {
+    subteam: "All Teams",
+    role: "Team Member ",
+    img: "/images/join_page/join_operations_marketing.jpg",
+    formLink: "https://docs.google.com/forms/d/e/1FAIpQLSdyXxqhT2Mgdkts7E2Rz5YLbm-vcjkkbAAKNvSkAs9YZ8wDcg/viewform?usp=header",
+  },
+  {
+    subteam: "Human Resources",
+    role: "HR member ",
+    img: "/images/join_page/join_operations_website.jpg",
+    formLink: "https://docs.google.com/forms/d/e/1FAIpQLSf1V4W9iJp8c5RGUY_SFkd45-iON_gwCuYPrTtMxQyI-rlf6g/viewform?usp=header",
+  }
+]
+
+const IS_RECRUITING = true;
 
 export default function Join() {
   return (
@@ -246,26 +261,24 @@ export default function Join() {
               If you have any further questions or queries, feel free to direct
               them to monashhpt@gmail.com
             </p></>)}
-
-
-
-
           </div>
-
-
         </div>
-        <div
-          className={`${IS_RECRUITING ? "-pt-10" : "pt-10"} pb-20`}>
+
+        <div className={`${IS_RECRUITING ? "-pt-10" : "pt-10"} pb-20 flex flex-wrap justify-center gap-8`}>
 
           {IS_RECRUITING ? 
-          <ApplicationCarousel applicationInfo={teamApplications} />
-            : 
-            <a href="https://forms.gle/U3Nn54SyTsi1WJYj7" target="_blank">
-              <button className=" font-Sansation font-semibold px-4 py-2 lg:px-16 lg:py-2 rounded-full border-2 bg-green text-black border-black hover:bg-black hover:text-white hover:border-white">
-                EOI Form
-              </button>
-            </a>
-            }
+            teamApplications2026.map((application, idx) => (
+              <DisplayApplicationCard
+                key={idx}  // React requires keys when rendering lists
+                {...application}  // Parses application properly
+              /> 
+            ))
+          : <FormEOI/>
+          
+          // Old carousel for when there was a Google Form for each subteam
+          // <ApplicationCarousel applicationInfo={teamApplications} /> 
+          // : <FormEOI/>
+          }
 
         </div>
       </PageSection>
