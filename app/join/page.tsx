@@ -221,7 +221,7 @@ const teamApplications2026: DisplayApplicationCardInfo[] = [
   }
 ]
 
-const IS_RECRUITING = true;
+const IS_RECRUITING = false;
 
 export default function Join() {
   return (
