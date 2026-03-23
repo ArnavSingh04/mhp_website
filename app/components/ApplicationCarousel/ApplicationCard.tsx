@@ -139,6 +139,9 @@ export default function ApplicationCard({
   );
 }
 
+/**
+ * Displayed when recruitment is closed so people can send an EOI
+ */
 export function FormEOI() {
   return (
     <a href="https://forms.gle/U3Nn54SyTsi1WJYj7" target="_blank">

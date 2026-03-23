@@ -4,6 +4,7 @@ import ApplicationCarousel from "../components/ApplicationCarousel/ApplicationCa
 import PageSection from "../components/PageSection";
 import Image from "next/image";
 
+// Only used for the old applications that had a form for each subteam
 const teamApplications: ApplicationCardInfo[] = [
   {
     subteam: "Electrical",
@@ -206,6 +207,8 @@ const teamApplications: ApplicationCardInfo[] = [
   }
 ];
 
+// New applications have two forms: HR and non-HR team members
+// Note that form links are prone to change and should be updated for new recruitment processes
 const teamApplications2026: DisplayApplicationCardInfo[] = [
   {
     subteam: "All Teams",
