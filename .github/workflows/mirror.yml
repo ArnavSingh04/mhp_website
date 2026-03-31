@@ -29,6 +29,7 @@ jobs:
           git config --global user.email "arnavsingh.sethi@gmail.com"
 
           git remote remove personal || true
-          git remote add personal https://x-access-token:$TOKEN@github.com/ArnavSingh04/mhp_website.git
+
+          git remote add personal "https://x-access-token:${TOKEN}@github.com/ArnavSingh04/mhp_website.git"
 
           git push personal Development:Development --force
