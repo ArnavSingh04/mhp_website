@@ -1,0 +1,18 @@
+name: Mirror to Personal Repo
+
+on:
+  push:
+    branches:
+      - master
+      - Development
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Push to personal repo
+        run: |
+          git remote add mirror https://<TOKEN>@github.com/ArnavSingh04/mhp_website.git
+          git push mirror --all
