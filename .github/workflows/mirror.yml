@@ -1,4 +1,4 @@
-name: Mirror to Personal Repo
+name: Mirror to Arnav Repo
 
 on:
   push:
@@ -9,10 +9,15 @@ on:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Push to personal repo
         run: |
-          git remote add mirror https://<TOKEN>@github.com/ArnavSingh04/mhp_website.git
-          git push mirror --all
+          git remote add mirror https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/ArnavSingh04/mhp_website.git
+          
+          # push specific branches (cleaner than --all)
+          git push mirror master --force
+          git push mirror Development --force
