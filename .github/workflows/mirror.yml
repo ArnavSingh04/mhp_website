@@ -13,11 +13,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 🔥 important fix
+
+      - name: Setup Git identity
+        run: |
+          git config --global user.name "ArnavSingh04"
+          git config --global user.email "arnavsingh.sethi@gmail.com"
 
       - name: Push to personal repo
         run: |
           git remote add mirror https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/ArnavSingh04/mhp_website.git
-          
-          # push specific branches (cleaner than --all)
           git push mirror master --force
           git push mirror Development --force
