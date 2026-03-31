@@ -12,12 +12,23 @@ jobs:
     steps:
       - name: Checkout org repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Debug auth
+        env:
+          TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: |
+          git ls-remote https://x-access-token:$TOKEN@github.com/ArnavSingh04/mhp_website.git
 
       - name: Push to personal repo
+        env:
+          TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           git config --global user.name "ArnavSingh04"
           git config --global user.email "arnavsingh.sethi@gmail.com"
 
-          git remote add personal https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/ArnavSingh04/mhp_website.git
+          git remote remove personal || true
+          git remote add personal https://x-access-token:$TOKEN@github.com/ArnavSingh04/mhp_website.git
 
           git push personal Development:Development --force
