@@ -11,10 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout current branch
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0   # 🔥 important fix
+
+      - name: Fetch all branches
+        run: |
+          git fetch origin master:master
+          git fetch origin Development:Development
 
       - name: Setup Git identity
         run: |
