@@ -69,7 +69,7 @@ export default function Page() {
               </h2>
               <p>
                 {`We are a student-led engineering team based at Monash University in Melbourne, Australia.
-                  Since 2015 we have been designing, manufacturing, & racing fully-faired 
+                  Since 2015 we have been designing, manufacturing, and racing fully-faired 
                   human-powered vehicles (HPVs) to push the limits of engineering performance.`}
               </p>
               <Button
