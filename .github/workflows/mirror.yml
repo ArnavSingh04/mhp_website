@@ -1,9 +1,8 @@
-name: Mirror to Arnav Repo
+name: Mirror Dev → Personal Main
 
 on:
   push:
     branches:
-      - master
       - Development
 
 jobs:
@@ -11,21 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout current branch
+      - name: Checkout Development
         uses: actions/checkout@v4
-
-      - name: Fetch all branches
-        run: |
-          git fetch origin master:master
-          git fetch origin Development:Development
 
       - name: Setup Git identity
         run: |
           git config --global user.name "ArnavSingh04"
           git config --global user.email "arnavsingh.sethi@gmail.com"
 
-      - name: Push to personal repo
+      - name: Push Development → main (personal repo)
         run: |
           git remote add mirror https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/ArnavSingh04/mhp_website.git
-          git push mirror master --force
-          git push mirror Development --force
+          
+          # Push current branch (Development) to main in personal repo
+          git push mirror HEAD:main --force
