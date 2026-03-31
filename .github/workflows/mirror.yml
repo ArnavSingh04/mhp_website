@@ -12,21 +12,13 @@ jobs:
     steps:
       - name: Checkout Development
         uses: actions/checkout@v4
-      
 
       - name: Setup Git identity
         run: |
           git config --global user.name "ArnavSingh04"
           git config --global user.email "arnavsingh.sethi@gmail.com"
-        
-
-      - name: Test repo access
-        run: |
-          git ls-remote https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/ArnavSingh04/mhp_website.git
 
       - name: Push Development → master (personal repo)
         run: |
-          git remote add mirror https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/ArnavSingh04/mhp_website.git
-          
-          # Push current branch (Development) to main in personal repo
+          git remote add mirror https://${{ secrets.PERSONAL_TOKEN }}@github.com/ArnavSingh04/mhp_website.git
           git push mirror HEAD:master --force
