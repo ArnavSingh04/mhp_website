@@ -149,6 +149,12 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Electrical/prince_mendel-idowu.jpg"
+        },
+        {
+          "name": "Quang Nguyen",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Electrical/quang_nguyen.jpg"
         }
       ]
     },
