@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import PageSection from "../components/PageSection";
-import teamData from "../../public/JSONs/teams.json"; // Importing the JSON file
+import teamData from "../../public/JSONs/teams.json"; // Import single source of truth for team data
 
 
 type teamMember={

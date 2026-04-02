@@ -83,13 +83,19 @@
           "image": "/images/teams_page/Electrical/iris_nguyen.jpg"
         },
         {
+          "name": "Alan Nie",
+          "role": "Hardware Team Lead",
+          "department": "Electrical Engineering",
+          "image": "/images/teams_page/Electrical/alan_nie.jpg"
+        }
+      ],
+      "members": [
+        {
           "name": "Joseph Ooi",
           "role": "Hardware Team Lead",
           "department": "Electrical Engineering",
           "image": "/images/teams_page/Electrical/joseph_ooi.jpg"
-        }
-      ],
-      "members": [
+        },
         {
           "name": "David Pollard",
           "role": "Team Member",
@@ -103,23 +109,6 @@
           "image": "/images/teams_page/Electrical/arnav_acharekar.png"
         },
         {
-          "name": "Aarabi Kugathas",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Electrical/aarabi_kugathas.jpg"
-        },        {
-          "name": "Ali Elgendy",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Electrical/ali_elgendy.jpg"
-        },
-        {
-          "name": "Ahmed Zahid",
-          "role": "Team Member",
-          "department": "Software Engineering",
-          "image": "/images/teams_page/Ops/ahmed_zahid.jpg"
-        },
-        {
           "name": "Couen Ham",
           "role": "Team Member",
           "department": "",
@@ -130,17 +119,12 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Electrical/daniel_he.jpg"
-        },        {
+        },        
+        {
           "name": "David Zeng",
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Electrical/david_zeng.jpg"
-        },
-        {
-          "name": "Hoor E Jannat Urboshi",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Ops/hoor_e_jannat_urboshi.jpg"
         },
         {
           "name": "James Robbs",
@@ -161,28 +145,10 @@
           "image": "/images/teams_page/Electrical/jeongwoo_choi.jpg"
         },
         {
-          "name": "Joseph Lim",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Electrical/joseph_lim.jpg"
-        },
-        {
-          "name": "Marcus Chow",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Electrical/marcus_chow.jpg"
-        },
-        {
           "name": "Prince Jeremy Mendel-Idowu",
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Electrical/prince_mendel-idowu.jpg"
-        },
-        {
-          "name": "Yixu (Sonny) Wang",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Electrical/yixu_wang.jpg"
         }
       ]
     },
