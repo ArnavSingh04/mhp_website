@@ -163,10 +163,9 @@ export default function Competitions() {
               human-powered vehicles.
             </h2>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center mt-5">
-              <div className="w-full lg:w-1/2 sm:h-1/2 center">
+              <div className="w-full lg:w-1/2 sm:h-1/2 justify-center">
                 <Image
                   src="/images/competition_page/competitionImage2.png"
-                  layout="intrinsic"
                   width={700}
                   height={200}
                   alt="ozhpv"

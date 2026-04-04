@@ -62,7 +62,7 @@ const BikeSection = ({bike} : BikeSectionProps) => {
                     <Image
                         src={bikeData[bike].image}
                         alt={`Image ${bike}`}
-                        layout="fill"
+                        fill
                         objectFit="cover"
                         />
                 </div>

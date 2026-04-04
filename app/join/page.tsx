@@ -240,7 +240,6 @@ export default function Join() {
           height="2309"
           objectFit="cover"
           alt="Trike Group photo"
-          layout="responsive"
         />
       </PageSection>
 

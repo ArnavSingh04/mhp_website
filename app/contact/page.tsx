@@ -18,11 +18,11 @@ export default function contact() {
         <div>
           <Image
             src="/images/contact_page/neraj_v3.jpg"
-            layout="responsive"
             height={50}
             width={2000}
             objectFit="cover"
             alt=""
+            className="w-full h-auto"
           />
         </div>
 

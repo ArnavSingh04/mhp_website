@@ -90,7 +90,7 @@ export default function Outreach() {
             height="300"
             objectFit="cover"
             alt="Epsom Primary School"
-            layout="responsive"
+            className="w-full h-auto"
             // className="top-1/2 transform -translate-y-1/4"
           />
         </div>
@@ -180,7 +180,7 @@ export default function Outreach() {
             height="300"
             objectFit="cover"
             alt="Wind Tunnel Model Image"
-            layout="responsive"
+            className="w-full h-auto"
             // className="transform -translate-y-1/4"
           />
         </div>
@@ -270,7 +270,7 @@ export default function Outreach() {
             height="300"
             objectFit="cover"
             alt="Epsom Primary School"
-            layout="responsive"
+            className="w-full h-auto"
           />
         </div>
       </section>

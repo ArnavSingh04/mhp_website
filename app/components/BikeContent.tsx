@@ -53,7 +53,7 @@ interface BikeContentProps {
                             <Image
                                 src={image.src}   
                                 alt={image.alt}
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                                 className="rounded-t-lg"
                             />
