@@ -87,16 +87,15 @@ export default function TeamPage() {
         <section className="relative text-center ">
           <div className="relative z-10">
             <h1 className="text-center text-5xl">Meet our Team</h1>
+            
             {/* Battle Mountain Group Image */}
-            <div className="w-dvh h-96 items-center overflow-hidden mx-auto">
+            <div className="relative w-dvh h-96 items-center overflow-hidden mx-auto">
               <Image
                 src="/images/home_page/battle_mountain_group.jpg"
-                width="800"
-                height="300"
-                objectFit="cover"
+                fill
+                style={{objectFit : "cover", objectPosition: "center 80%"}}
                 alt="Battle Mountain Group"
-                layout="responsive"
-                className="top-1/2  transform -translate-y-1/3"
+                className="top-1/2 transform -translate-y-1/5"
               />
             </div>
 
