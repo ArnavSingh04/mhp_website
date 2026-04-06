@@ -20,7 +20,7 @@ export default function contact() {
             src="/images/contact_page/neraj_v3.jpg"
             height={50}
             width={2000}
-            objectFit="cover"
+            style={{ objectFit : "cover"}}
             alt=""
             className="w-full h-auto"
           />

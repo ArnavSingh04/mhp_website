@@ -63,7 +63,7 @@ const BikeSection = ({bike} : BikeSectionProps) => {
                         src={bikeData[bike].image}
                         alt={`Image ${bike}`}
                         fill
-                        objectFit="cover"
+                        style={{ objectFit : "cover"}}
                         />
                 </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 interface ImageCarouselProps {
   images: string[];
@@ -28,9 +29,11 @@ const ImageCarousel = ({images}:{images:string[]}) => {
     <div className="relative w-full">
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
         {images.map((image, index) => (
-          <img
+          <Image
             key={index}
             src={image}
+            fill
+            style={{ objectFit: "cover" }}
             className={`absolute w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}

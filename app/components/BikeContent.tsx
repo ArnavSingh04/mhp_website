@@ -54,7 +54,7 @@ interface BikeContentProps {
                                 src={image.src}   
                                 alt={image.alt}
                                 fill
-                                objectFit="cover"
+                                style={{ objectFit : "cover"}}
                                 className="rounded-t-lg"
                             />
                         </div>
