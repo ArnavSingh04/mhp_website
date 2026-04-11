@@ -219,12 +219,6 @@
           "image": "/images/teams_page/Aero/eugene_valos.jpg"
         },
         {
-          "name": "Milan Umesh",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Aero/milan_umesh.jpg"
-        },
-        {
           "name": "Tai Villiers",
           "role": "Team Member",
           "department": "",
@@ -270,6 +264,12 @@
           "image": "/images/teams_page/Materials/alex_lee.jpg"
         },
         {
+          "name": "Wendalyn Yu",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Materials/wendalyn_yu.jpg"
+        },
+        {
           "name": "Clarisse Liew",
           "role": "Team Member",
           "department": "Materials Engineering and Commerce",
@@ -309,12 +309,6 @@
           "image": "/images/teams_page/Ops/rory_tuke.png"
         },
         {
-          "name": "Alice Xiao",
-          "role": "Team Member",
-          "department": "Electrical Engineering",
-          "image": "/images/teams_page/Auxil/alice_xiao.jpg"
-        },
-        {
           "name": "Keith Andre Abraham",
           "role": "Team Member",
           "department": "",
@@ -343,12 +337,6 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Ops/joy_jayanthan.jpg"
-        },
-        {
-          "name": "Wendalyn Yu",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Ops/wendalyn_yu.jpg"
         }
       ]
     },
@@ -385,7 +373,7 @@
         },
         {
           "name": "Kushani De Silva",
-          "role": "Team Lead",
+          "role": "Team Member",
           "department": "Mechanical Engineering",
           "image": "/images/teams_page/Chassis/kushani_de_silva.jpg"
         },
