@@ -61,6 +61,12 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/RiderDev/victoria_ly.jpg"
+        },
+        {
+          "name": "Loke Egede-Poulsen",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/RiderDev/loke_egede-poulsen.jpg"
         }
       ]
     },
@@ -156,6 +162,12 @@
           "image": "/images/teams_page/Electrical/quang_nguyen.jpg"
         },
         {
+          "name": "Austin Lobriza",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Electrical/austin_lobriza.jpg"
+        },
+        {
           "name": "Maureen Pham",
           "role": "Team Member",
           "department": "",
@@ -193,6 +205,18 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Aero/james_di_nicolantonio.jpg"
+        },
+        {
+          "name": "Vivienne Floyd",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Aero/vivienne_floyd.jpg"
+        },
+        {
+          "name": "Eugene Valos",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Aero/eugene_valos.jpg"
         },
         {
           "name": "Milan Umesh",
@@ -240,6 +264,12 @@
           "image": "/images/teams_page/Materials/louis_hansford.jpg"
         },
         {
+          "name": "Alex Lee",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Materials/alex_lee.jpg"
+        },
+        {
           "name": "Clarisse Liew",
           "role": "Team Member",
           "department": "Materials Engineering and Commerce",
@@ -279,12 +309,6 @@
           "image": "/images/teams_page/Ops/rory_tuke.png"
         },
         {
-          "name": "Alvin Fung",
-          "role": "Team Member",
-          "department": "Software Engineering and Science",
-          "image": "/images/teams_page/Ops/alvin_fung.jpg"
-        },
-        {
           "name": "Alice Xiao",
           "role": "Team Member",
           "department": "Electrical Engineering",
@@ -301,6 +325,30 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Ops/valerie_tang.png"
+        },
+        {
+          "name": "Archana Seralathan",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Ops/archana_seralathan.jpg"
+        },
+        {
+          "name": "Btari Nadya Natasha",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Ops/btari_nadya_natasha.jpg"
+        },
+        {
+          "name": "Joy Jayanthan",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Ops/joy_jayanthan.jpg"
+        },
+        {
+          "name": "Wendalyn Yu",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Ops/wendalyn_yu.jpg"
         }
       ]
     },
