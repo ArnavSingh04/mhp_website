@@ -88,9 +88,9 @@ export default function Outreach() {
             src="/images/outreach_page/outreach_1.jpg"
             width="800"
             height="300"
-            objectFit="cover"
+            style={ {objectFit: "cover"} }
             alt="Epsom Primary School"
-            layout="responsive"
+            className="w-full h-auto"
             // className="top-1/2 transform -translate-y-1/4"
           />
         </div>
@@ -178,9 +178,9 @@ export default function Outreach() {
             src="/images/outreach_page/outreach_2.jpg"
             width="800"
             height="300"
-            objectFit="cover"
+            style={{ objectFit : "cover"}}
             alt="Wind Tunnel Model Image"
-            layout="responsive"
+            className="w-full h-auto"
             // className="transform -translate-y-1/4"
           />
         </div>
@@ -268,9 +268,9 @@ export default function Outreach() {
             src="/images/outreach_page/outreach_3.jpg"
             width="800"
             height="300"
-            objectFit="cover"
+            style={{ objectFit : "cover"}}
             alt="Epsom Primary School"
-            layout="responsive"
+            className="w-full h-auto"
           />
         </div>
       </section>

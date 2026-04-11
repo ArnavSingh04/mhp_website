@@ -12,7 +12,8 @@ export default function Page() {
     "/images/home_page/o_week_group.jpg",
     "/images/home_page/mhp_group.jpg",
   ];
-  const values = [
+
+  const values_old = [
     {
       name: "Community",
       description: "We work collaboratively as a team to achieve shared goals",
@@ -42,6 +43,22 @@ export default function Page() {
         "We collaborate with the HPV community and promote STEM through outreach",
     },
   ];
+
+  const values = [
+    {
+      name: "Integration",
+      description: "Ensuring seamless collaboration and alignment across all technical areas.",
+    },
+    {
+      name: "Curiosity",
+      description: "Actively seeking to understand and engage with work beyond one’s immediate domain.",
+    },
+    {
+      name: "Ambition",
+      description: "Relentlessly striving toward challenging goals that elevate team performance.",
+    },
+  ]
+
   return (
     <>
       <div className="px-5">
@@ -69,7 +86,7 @@ export default function Page() {
               </h2>
               <p>
                 {`We are a student-led engineering team based at Monash University in Melbourne, Australia.
-                  Since 2015 we have been designing, manufacturing, and racing fully-faired 
+                  Since 2015 we have been designing, manufacturing, & racing fully-faired 
                   human-powered vehicles (HPVs) to push the limits of engineering performance.`}
               </p>
               <Button
@@ -89,17 +106,8 @@ export default function Page() {
             Our Mission
           </h2>
           <p className="my-2">
-            We strive to set the standard for advanced, expertly
-            engineered human-powered vehicles.
-            <br />
-            <br />
-            Our team designs, manufactures, and races cutting-edge HPVs in
-            premier competitions. Through hands-on design, rigorous testing, and
-            high-stakes races, we provide students with real-world engineering
-            experience while empowering our riders to perform at elite levels.
-            We share our passion for engineering HPVs at our school outreach
-            programs and proudly promote STEM and sustainability to inspire the
-            next generation of engineers.
+            To design and build high-performance, sustainable human-powered vehicles while developing 
+            well-rounded engineers through hands-on innovation, teamwork, and community engagement.
           </p>
           <Button
             hrefString="/bikes"
@@ -107,6 +115,16 @@ export default function Page() {
             theme="dark"
             target=""
           />
+        </PageSection>
+
+        <PageSection colourWay="dark">
+          <h2 className="font-Aldrich underline  decoration-green decoration-4">
+            Our Vision
+          </h2>
+          <p className="my-2">
+            To be a leading student engineering team that advances human-powered transportation and 
+            inspires the next generation of engineers.
+          </p>
         </PageSection>
 
         <PageSection colourWay="dark">

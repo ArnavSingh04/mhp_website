@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface Item {
   image: string;
@@ -57,12 +58,13 @@ export default function SponsorshipCarousel({
       <div className="flex-grow grid grid-cols-1 gap-8 px-10 py-4 w-3/4 h-1/4 sm:grid-cols-3">
         {visibleItems.map((item, index) => (
           <div key={index} className="text-center">
-            <div className="relative flex items-center justify-center">
+            <div className="relative h-48 w-full flex items-center justify-center">
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  className="h-48 w-full object-contain"
+                <Image
                   src={item.image}
                   alt={item.title}
+                  fill
+                  style={{ objectFit: "contain" }}
                 />
               </a>
             </div>

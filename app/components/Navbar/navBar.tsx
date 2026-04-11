@@ -73,7 +73,15 @@ const Navbar = () => {
   };
 
   // Banner settings
-  const BANNER_TEXT = <>We&apos;re Recruiting! 👉 <a href="/join" className="underline hover:text-blue-600">Join Us Here</a> 👈 - Apply by August 6th!</>
+  const BANNER_TEXT = (
+    <>
+      We&apos;re Recruiting! 👉
+      <Link href="/join" className="underline hover:text-blue-600">
+        Join Us Here
+      </Link>
+      👈 - Apply by August 6th!
+    </>
+  );
   const SHOW_BANNER = false
 
   // Old code for drop down menus
@@ -94,14 +102,14 @@ const Navbar = () => {
           {/* Image */}
           <div className="flex-1/4"></div>
           <div className="justify-center items-center">
-            <a href="/">
+            <Link href="/">
               <Image
                 src="/images/mobile_logo.png"
                 alt="Logo"
                 width={80}
                 height={50}
               />
-            </a>
+            </Link>
           </div>
           {/* Menu button */}
           <button

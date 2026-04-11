@@ -17,7 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@next/third-parties": "^15.1.6",
     "motion": "^12.23.1",
-    "next": "^14.2.13",
+    "next": "^15.5.14",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -28,7 +28,7 @@
     "all-contributors-cli": "^6.26.1",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
-    "eslint-config-next": "14.1.4",
+    "eslint-config-next": "^15.5.14",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "typescript": "^5"

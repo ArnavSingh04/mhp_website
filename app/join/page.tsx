@@ -238,9 +238,8 @@ export default function Join() {
           src="/images/join_page/join_main.jpg"
           width="5184"
           height="2309"
-          objectFit="cover"
+          style={{ objectFit : "cover"}}
           alt="Trike Group photo"
-          layout="responsive"
         />
       </PageSection>
 
