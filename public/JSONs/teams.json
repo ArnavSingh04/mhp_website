@@ -5,7 +5,9 @@
       "description": "Upper management, comprising the CEO, CTO, and COO, ensures the team’s strategic, technical, and operational success. The CEO handles long-term vision, budgeting, and representation, the CTO oversees technical development and collaboration, and the COO manages daily operations and team culture. Together, they drive cohesive direction and efficient execution across all aspects of MHP.",
       "image": "/images/teams_page/upperman.jpg",
       "Team_Leads": [
-        {
+      ],
+      "members": [
+                {
           "name": "Casey Diep",
           "role": "Chief Executive Officer",
           "department": "Science and Information Technology",
@@ -23,8 +25,7 @@
           "department": "",
           "image": "/images/teams_page/UpperManage/siobhan_hearst.png"
         }
-      ],
-      "members": []
+      ]
     },
     {
       "name": "Rider Development",
