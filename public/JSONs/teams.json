@@ -154,6 +154,12 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Electrical/quang_nguyen.jpg"
+        },
+        {
+          "name": "Maureen Pham",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Electrical/maureen_pham.png"
         }
       ]
     },
@@ -289,6 +295,12 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Ops/keith_andre_abraham.jpg"
+        },
+        {
+          "name": "Valerie Tang",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Ops/valerie_tang.png"
         }
       ]
     },
@@ -358,6 +370,12 @@
           "role": "Team Member",
           "department": "Mechanical Engineering and Commerce",
           "image": "/images/teams_page/Chassis/martin_grozev.jpg"
+        },
+        {
+          "name": "Harvey Cook",
+          "role": "Team Member",
+          "department": "",
+          "image": "/images/teams_page/Chassis/harvey_cook.jpg"
         }
       ]
     },
