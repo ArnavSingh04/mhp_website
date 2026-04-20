@@ -202,16 +202,16 @@
           "image": "/images/teams_page/Aero/abel_thevathason.jpg"
         },
         {
-          "name": "James Di Nicolantonio",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Aero/james_di_nicolantonio.jpg"
-        },
-        {
           "name": "Vivienne Floyd",
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Aero/vivienne_floyd.jpg"
+        },
+        {
+          "name": "Kevin Tran",
+          "role": "Team member",
+          "department": "",
+          "image": "/images/teams_page/Auxil/kevin_tran.jpg"
         },
         {
           "name": "Eugene Valos",
@@ -291,9 +291,15 @@
       "Team_Leads": [
         {
           "name": "Emma Ang",
-          "role": "Team Lead",
+          "role": "Team Lead and Marketing Manager",
           "department": "",
           "image": "/images/teams_page/Ops/emma_ang.jpg"
+        },
+        {
+          "name": "Joy Jayanthan",
+          "role": "Sponsorship Manager",
+          "department": "",
+          "image": "/images/teams_page/Ops/joy_jayanthan.jpg"
         }
       ],
       "members": [
@@ -332,12 +338,6 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Ops/btari_nadya_natasha.jpg"
-        },
-        {
-          "name": "Joy Jayanthan",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Ops/joy_jayanthan.jpg"
         }
       ]
     },
@@ -444,12 +444,6 @@
           "role": "Workshop Manager",
           "department": "",
           "image": "/images/teams_page/Auxil/kevin_tran.jpg"
-        },
-        {
-          "name": "James Di Nicolantonio",
-          "role": "Systems Engineer",
-          "department": "",
-          "image": "/images/teams_page/Aero/james_di_nicolantonio.jpg"
         },
         {
           "name": "Kit Kirby",
