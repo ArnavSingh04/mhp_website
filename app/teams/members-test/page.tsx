@@ -1,16 +1,8 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import PageSection from "../../components/PageSection";
 import teamData from "../../../public/JSONs/teams.json"; // Import single source of truth for team data
 
-
-export type TeamMember = {
-  name: string;
-  role: string;
-  department: string;
-  image: string;
-}
 
 export default function TeamPage() {
   // Helper function to determine the layout for the last row
@@ -26,7 +18,8 @@ export default function TeamPage() {
 
     if (membersInLastRow === 1 && index === totalMembers - 1) {
       return "lg:col-start-2 lg:col-end-3"; // Center the single member
-    } else if (
+    } 
+    else if (
       membersInLastRow === 2 &&
       (index === totalMembers - 2 || index === totalMembers - 1)
     ) {
@@ -34,23 +27,8 @@ export default function TeamPage() {
         ? "lg:col-start-1 lg:col-end-2"
         : "lg:col-start-3 lg:col-end-4"; // First and third column
     }
+
     return ""; // For rows with 3 members, default layout applies
-  };
-
-
-
-  const getLeadLayoutClasses = (teamLeads:teamMember[], teamName:string) => {
-    const isSpecialTeam = teamName === "Management Team" || teamName === "Auxiliary";
-    
-    if (teamLeads.length === 2 || isSpecialTeam) {
-      return "grid grid-cols-1 md:grid-cols-2 gap-8";
-    }
-    
-    if (teamLeads.length === 1) {
-      return "flex justify-center";
-    }
-    
-    return "flex flex-wrap justify-center gap-6";
   };
 
   return (

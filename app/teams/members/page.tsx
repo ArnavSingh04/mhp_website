@@ -3,14 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import PageSection from "../../components/PageSection";
 import teamData from "../../../public/JSONs/teams.json"; // Import single source of truth for team data
+import { TeamMember } from "../common/common";
 
-
-type teamMember={
-  name: string;
-  role: string;
-  department: string;
-  image: string;
-}
 
 export default function TeamPage() {
   const [currentTeamIndex, setCurrentTeamIndex] = useState(0);
@@ -66,7 +60,7 @@ export default function TeamPage() {
 
 
 
-  const getLeadLayoutClasses = (teamLeads:teamMember[], teamName:string) => {
+  const getLeadLayoutClasses = (teamLeads: TeamMember[], teamName:string) => {
     const isSpecialTeam = teamName === "Management Team" || teamName === "Auxiliary";
     
     if (teamLeads.length === 2 || isSpecialTeam) {
