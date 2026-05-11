@@ -48,11 +48,15 @@ const competitionItems = {
   ],
 };
 
+/**
+ * Change these sections to add different pages
+ */
+
 const mobileNavigation: MobileNavItemsProps[] = [
   { name: "Home", href: "/" },
   { name: "Bikes", href: "/bikes" },
   { name: "Competitions", href: "/competitions" },
-  { name: "Teams", href: "/teams/team.tsx" },
+  { name: "Teams", href: "/teams/members" },
   { name: "Outreach", href: "/outreach" },
   { name: "Join", href: "/join" },
   { name: "Contact Us", href: "/contact" },
@@ -64,6 +68,7 @@ const desktopNavigation: NavItemsProps[] = [
   { name: "Teams", srcString: "",
     dropdownItems: [
       { name: "Members", href: "/teams/members" },
+      { name: "Members Test", href: "/teams/members-test" },
       { name: "Leads", href: "/teams/leads" },
     ]
   },
