@@ -5,7 +5,7 @@ import PageSection from "../../components/PageSection";
 import teamData from "../../../public/JSONs/teams.json"; // Import single source of truth for team data
 
 
-type teamMember={
+export type TeamMember = {
   name: string;
   role: string;
   department: string;
@@ -126,32 +126,8 @@ export default function TeamPage() {
             </div>
           </section>
 
-          {/* Team Members */}
+          {/* Team Members Only (No leads or UM) */}
           <section className="mt-12">
-            {/* Leads */}
-            <div className={`${getLeadLayoutClasses(team.Team_Leads, team.name)} px-8 mb-12`}>
-              {team.Team_Leads?.map((lead, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-900 p-4 rounded-lg text-center"
-                >
-                  <Image
-                    src={lead.image}
-                    alt={lead.name}
-                    width={200}
-                    height={200}
-                    className="mx-auto rounded-md object-cover w-[220px] h-[150px]"
-                  />
-
-                  <h4 className="text-xl font-bold mt-4 text-green">
-                    {lead.name}
-                  </h4>
-
-                  <p>{lead.role}</p>
-                </div>
-              ))}
-            </div>
-
             {/* Members */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-8">
               {team.members?.map((member, index) => (
