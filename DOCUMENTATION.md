@@ -15,3 +15,8 @@ Take a look at the current structure to get an idea of how to add a new page.
 If you want to add a dropdown menu (e.g. how Teams drops down to show Members and Leads), the dropdown pages should be stored as a list in the "dropdownItems" prop.
 
 Additionally, take a look at how the dropdown for Teams is implemented and copy.
+
+## Fade-In Animation
+For (almost) every UI component, it fades in when it becomes visible. To change how the fade animation works, modify `tailwind.config.js`; line 40 has "animation" where you can edit it.
+
+To change when it fades, go to `PageSection.tsx`
