@@ -15,14 +15,14 @@ export type TeamMember = {
 export default function TeamPage() {
   // Helper function to determine the layout for the last row
   const getLastRowClasses = (members: string | any[], index: number) => {
-    const membersPerRow = 3;
+    const MEMBERS_PER_ROW = 3;
     const totalMembers = members.length;
     const isLastRow =
-      index >= totalMembers - (totalMembers % membersPerRow || membersPerRow);
+      index >= totalMembers - (totalMembers % MEMBERS_PER_ROW || MEMBERS_PER_ROW);
 
     if (!isLastRow) return "";
 
-    const membersInLastRow = totalMembers % membersPerRow;
+    const membersInLastRow = totalMembers % MEMBERS_PER_ROW;
 
     if (membersInLastRow === 1 && index === totalMembers - 1) {
       return "lg:col-start-2 lg:col-end-3"; // Center the single member
