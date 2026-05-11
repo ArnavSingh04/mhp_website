@@ -12,7 +12,8 @@ const sectionThemes = {
 };
 
 /**
- * Everytime an entry (UI component) comes into view, it fades in. 
+ * When an entry (UI component) comes into view for the first time, it fades in
+ * UI components don't fade in when scrolling back to them
  */
 export default function PageSection({ colourWay, children }: PageSectionProps) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -26,9 +27,6 @@ export default function PageSection({ colourWay, children }: PageSectionProps) {
             setIsVisible(true);
             observer.unobserve(entry.target);
           } 
-          // else {
-          //   setIsVisible(false);
-          // }
         });
       },
       { threshold: 0.05 }
