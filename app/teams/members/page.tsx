@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import PageSection from "../components/PageSection";
-import teamData from "../../public/JSONs/teams.json"; // Import single source of truth for team data
+import PageSection from "../../components/PageSection";
+import teamData from "../../../public/JSONs/teams.json"; // Import single source of truth for team data
 
 
 type teamMember={
