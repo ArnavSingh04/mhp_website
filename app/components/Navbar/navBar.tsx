@@ -6,11 +6,20 @@ import MobileNavItem from "./MobileNavItem";
 import { useState } from "react";
 import Banner from "../Banner";
 
-interface NavItemsProps {
+
+interface DropdownItem {
   name: string;
   href: string;
-  srcString: string;
 }
+
+// Interface accommodates for pages part of dropdown menus
+interface NavItemsProps {
+  name: string;
+  href?: string;
+  srcString: string;
+  dropdownItems?: DropdownItem[]
+}
+
 interface MobileNavItemsProps {
   name: string;
   href: string;
@@ -43,7 +52,7 @@ const mobileNavigation: MobileNavItemsProps[] = [
   { name: "Home", href: "/" },
   { name: "Bikes", href: "/bikes" },
   { name: "Competitions", href: "/competitions" },
-  { name: "Teams", href: "/teams" },
+  { name: "Teams", href: "/teams/team.tsx" },
   { name: "Outreach", href: "/outreach" },
   { name: "Join", href: "/join" },
   { name: "Contact Us", href: "/contact" },
@@ -52,7 +61,12 @@ const mobileNavigation: MobileNavItemsProps[] = [
 const desktopNavigation: NavItemsProps[] = [
   { name: "Bikes", href: "/bikes", srcString: "" },
   { name: "Competitions", href: "/competitions", srcString: "" },
-  { name: "Teams", href: "/teams", srcString: "" },
+  { name: "Teams", srcString: "",
+    dropdownItems: [
+      { name: "Members", href: "/teams/members" },
+      { name: "Leads", href: "/teams/leads" },
+    ]
+  },
   { name: "Home", href: "/", srcString: "/images/logo.png" },
   { name: "Outreach", href: "/outreach", srcString: "" },
   { name: "Join", href: "/join", srcString: "" },
@@ -157,14 +171,45 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-full w-full">
             {/* Left Navigation Items */}
             <div className="flex-[2] flex justify-around">
-              {desktopNavigation.slice(0, 3).map((item, index) => (
-                <NavItem
-                  key={index}
-                  text={item.name}
-                  hrefString={item.href}
-                  srcString={item.srcString}
-                />
-              ))}
+              {desktopNavigation.slice(0, 3).map((item, index) => {
+                if (item.dropdownItems) {
+                  return (
+                    <div
+                      key={index}
+                      className="relative"
+                      onMouseEnter={() => setTeamMenu(true)}
+                      onMouseLeave={() => setTeamMenu(false)}
+                    >
+                      <button className="px-4 py-2 hover:text-gray-300">
+                        Teams
+                      </button>
+
+                      {teamMenu && (
+                        <div className="absolute top-full left-0 bg-black border border-gray-700 rounded-md shadow-lg">
+                          {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                            <Link
+                              className="block px-4 py-2 hover:bg-gray-800"
+                              key={dropdownIndex}
+                              href={dropdownItem.href}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                return (
+                  <NavItem
+                    key={index}
+                    text={item.name}
+                    hrefString={item.href || ""}
+                    srcString={item.srcString}
+                  />
+                );
+              })}
             </div>
 
             {/* Center Logo */}

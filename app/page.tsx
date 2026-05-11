@@ -13,37 +13,6 @@ export default function Page() {
     "/images/home_page/mhp_group.jpg",
   ];
 
-  const values_old = [
-    {
-      name: "Community",
-      description: "We work collaboratively as a team to achieve shared goals",
-    },
-    {
-      name: "Respect",
-      description:
-        "We value diverse perspectives and treat all team members with dignity",
-    },
-    {
-      name: "Excellence",
-      description:
-        "We take pride in our work and continually strive to deliver our best",
-    },
-    {
-      name: "Safety",
-      description: "We uphold best practices in safety without compromise",
-    },
-    {
-      name: "Innovation",
-      description:
-        "We encourage creativity and push the boundaries of what is thought possible",
-    },
-    {
-      name: "Visibility",
-      description:
-        "We collaborate with the HPV community and promote STEM through outreach",
-    },
-  ];
-
   const values = [
     {
       name: "Integration",
