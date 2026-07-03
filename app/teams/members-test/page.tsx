@@ -68,7 +68,7 @@ export default function TeamPage() {
         </nav>
 
         {teamData.sub_teams.filter((team) => team.name !== "Management Team").map((team, teamIndex) => (
-        <div key={teamIndex} id={toTeamId(team.name)} className="mb-20">
+        <div key={teamIndex} id={toTeamId(team.name)} className="mb-20 border-b border-divborder pb-12">
           {/* Team Title */}
           <h2 className="text-3xl font-bold text-center underline decoration-green mb-8">
             {team.name}
