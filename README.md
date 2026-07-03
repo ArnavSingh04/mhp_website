@@ -6,6 +6,9 @@ _The second iteration of the MHP website_
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Documentation
+There is a second readme (DOCUMENTATION.md) for more thorough documentation that entails how to make changes and where to make them.
+
 ## Getting Started
 
 Make sure have ESLint Extension if working in vscode, or if using a different IDE, follow this guide (https://eslint.org/docs/latest/use/integrations#editors)

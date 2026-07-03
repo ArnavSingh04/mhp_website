@@ -38,8 +38,8 @@ module.exports = {
         "7xl": "5rem",
       },
       animation: {
-        fadeIn: "fadeIn 1000ms ease-in",
-        fadeOut: "fadeOut 1000ms ease-out",
+        fadeIn: "fadeIn 500ms ease-in",
+        fadeOut: "fadeOut 500ms ease-out",
       },
       keyframes: {
         fadeIn: {

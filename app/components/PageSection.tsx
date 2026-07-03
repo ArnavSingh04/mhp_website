@@ -11,6 +11,10 @@ const sectionThemes = {
   dark: "position-relative bg-black text-white p-6 w-full z-0",
 };
 
+/**
+ * When an entry (UI component) comes into view for the first time, it fades in
+ * UI components don't fade in when scrolling back to them
+ */
 export default function PageSection({ colourWay, children }: PageSectionProps) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -21,9 +25,8 @@ export default function PageSection({ colourWay, children }: PageSectionProps) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-          } else {
-            setIsVisible(false);
-          }
+            observer.unobserve(entry.target);
+          } 
         });
       },
       { threshold: 0.05 }
@@ -46,9 +49,10 @@ export default function PageSection({ colourWay, children }: PageSectionProps) {
     <>
     <div
       ref={sectionRef}
-      className={`${sectionThemes[colourWay]} ${
-        isVisible ? "animate-fadeIn" : "opacity-0"
-      }`}
+      className={`
+        ${sectionThemes[colourWay]} 
+        ${isVisible ? "animate-fadeIn" : "opacity-0"}
+      `}
     >
       {children}
     </div>

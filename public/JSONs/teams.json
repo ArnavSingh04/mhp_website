@@ -4,9 +4,7 @@
       "name": "Management Team",
       "description": "Upper management, comprising the CEO, CTO, and COO, ensures the team’s strategic, technical, and operational success. The CEO handles long-term vision, budgeting, and representation, the CTO oversees technical development and collaboration, and the COO manages daily operations and team culture. Together, they drive cohesive direction and efficient execution across all aspects of MHP.",
       "image": "/images/teams_page/upperman.jpg",
-      "Team_Leads": [
-      ],
-      "members": [
+      "team_leads": [
         {
           "name": "Casey Diep",
           "role": "Chief Executive Officer",
@@ -25,13 +23,15 @@
           "department": "",
           "image": "/images/teams_page/UpperManage/siobhan_hearst.png"
         }
+      ],
+      "members": [
       ]
     },
     {
       "name": "Rider Development",
       "description": "The Rider Development subteam focuses on maximising rider performance. Comprised of riders and technical members, they arrange cycling and strength training, develop personal power plans, and coordinate training days at the Packer Park Velodrome.",
       "image": "/images/teams_page/rider.jpg",
-      "Team_Leads": [
+      "team_leads": [
         {
           "name": "Sean Solnik",
           "role": "Team Lead",
@@ -75,7 +75,7 @@
       "name": "Electrical",
       "description": "The Electrical subteam oversees the bike’s electrical and software systems, including cameras and data acquisition tools essential for rider safety and performance. The setup features components such as Raspberry Pis, microcontrollers, sensors, and custom software for field data analysis.",
       "image": "/images/teams_page/electrical.png",
-      "Team_Leads": [
+      "team_leads": [
         {
           "name": "Arnav Singh Sethi",
           "role": "Software Team Co-Lead",
@@ -180,7 +180,7 @@
       "name": "Aerodynamics",
       "description": "The Aerodynamics subteam at MHP designs and tests aerodynamic components like the external shell and wheel covers to reduce drag and increase bike speed. They use computational fluid dynamics (CFD) to learn and make aerodynamic design choices that optimise and enhance bike performance.",
       "image": "/images/teams_page/aero.jpg",
-      "Team_Leads": [
+      "team_leads": [
         {
           "name": "Oliver Huang",
           "role": "Team Lead",
@@ -202,16 +202,16 @@
           "image": "/images/teams_page/Aero/abel_thevathason.jpg"
         },
         {
-          "name": "James Di Nicolantonio",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Aero/james_di_nicolantonio.jpg"
-        },
-        {
           "name": "Vivienne Floyd",
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Aero/vivienne_floyd.jpg"
+        },
+        {
+          "name": "Kevin Tran",
+          "role": "Team member",
+          "department": "",
+          "image": "/images/teams_page/Auxil/kevin_tran.jpg"
         },
         {
           "name": "Eugene Valos",
@@ -231,7 +231,7 @@
       "name": "Materials",
       "description": "The Materials subteam prototypes and manufactures the fairing, focusing on optimising its design for aerodynamics and rider safety. They research and experiment with various composite manufacturing methods and composite materials to create the aerodynamic fairing.",
       "image": "/images/teams_page/materials_2.jpg",
-      "Team_Leads": [
+      "team_leads": [
         {
           "name": "Ming Xuan (Connor) Choong",
           "role": "Team Lead",
@@ -288,12 +288,18 @@
       "name": "Business",
       "description": "The Operations subteam handles marketing, sponsorship, events, and outreach to promote MHP and engage the community. They run programs like “Build a HPV,” manage sponsor relations, and support STEM engagement, branding, and the team’s website.",
       "image": "/images/teams_page/operations_team.png",
-      "Team_Leads": [
+      "team_leads": [
         {
           "name": "Emma Ang",
-          "role": "Team Lead",
+          "role": "Team Lead and Marketing Manager",
           "department": "",
           "image": "/images/teams_page/Ops/emma_ang.jpg"
+        },
+        {
+          "name": "Joy Jayanthan",
+          "role": "Sponsorship Manager",
+          "department": "",
+          "image": "/images/teams_page/Ops/joy_jayanthan.jpg"
         }
       ],
       "members": [
@@ -332,12 +338,6 @@
           "role": "Team Member",
           "department": "",
           "image": "/images/teams_page/Ops/btari_nadya_natasha.jpg"
-        },
-        {
-          "name": "Joy Jayanthan",
-          "role": "Team Member",
-          "department": "",
-          "image": "/images/teams_page/Ops/joy_jayanthan.jpg"
         }
       ]
     },
@@ -345,7 +345,7 @@
       "name": "Chassis & Drivetrain",
       "description": "The Chassis & Drivetrain subteam designs and manufactures all mechanical components of the vehicle, using CAD and Finite Element Analysis (FEA) to model and verify their strength. They utilise Monash University facilities for manufacturing, employing techniques like welding and building.",
       "image": "/images/teams_page/chassis_drivetrain.jpg",
-      "Team_Leads": [
+      "team_leads": [
         {
           "name": "Aria Afi",
           "role": "Team Lead",
@@ -420,7 +420,7 @@
       "name": "Auxiliary",
       "description": "The Auxiliary Team at Monash Human Power ensures the smooth operation of all non-engineering functions, providing essential support across the project. This team oversees workshop logistics, finances, systems coordination, team safety, and HR, allowing the broader team to work safely, efficiently, and effectively.",
       "image": "/images/teams_page/chris-clarisse-spray-paint.jpg",
-      "Team_Leads": [
+      "team_leads": [
         {
           "name": "Alice Xiao",
           "role": "Finance Manager",
@@ -444,12 +444,6 @@
           "role": "Workshop Manager",
           "department": "",
           "image": "/images/teams_page/Auxil/kevin_tran.jpg"
-        },
-        {
-          "name": "James Di Nicolantonio",
-          "role": "Systems Engineer",
-          "department": "",
-          "image": "/images/teams_page/Aero/james_di_nicolantonio.jpg"
         },
         {
           "name": "Kit Kirby",

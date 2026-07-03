@@ -1,16 +1,10 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import PageSection from "../components/PageSection";
-import teamData from "../../public/JSONs/teams.json"; // Import single source of truth for team data
+import PageSection from "../../components/PageSection";
+import teamData from "../../../public/JSONs/teams.json"; // Import single source of truth for team data
+import { TeamMember } from "../common/common";
 
-
-type teamMember={
-  name: string;
-  role: string;
-  department: string;
-  image: string;
-}
 
 export default function TeamPage() {
   const [currentTeamIndex, setCurrentTeamIndex] = useState(0);
@@ -66,7 +60,7 @@ export default function TeamPage() {
 
 
 
-  const getLeadLayoutClasses = (teamLeads:teamMember[], teamName:string) => {
+  const getLeadLayoutClasses = (teamLeads: TeamMember[], teamName:string) => {
     const isSpecialTeam = teamName === "Management Team" || teamName === "Auxiliary";
     
     if (teamLeads.length === 2 || isSpecialTeam) {
@@ -186,12 +180,12 @@ export default function TeamPage() {
             <h2 className="text-center text-4xl font-bold mb-2">
               Team Members
             </h2>
-            <div className={`${getLeadLayoutClasses(currentTeam.Team_Leads, currentTeam.name)} px-8 mb-12`}>
-              {currentTeam.Team_Leads?.map((lead, index) => (
+            <div className={`${getLeadLayoutClasses(currentTeam.team_leads, currentTeam.name)} px-8 mb-12`}>
+              {currentTeam.team_leads?.map((lead, index) => (
                 <div
                   key={index}
                   className={`bg-gray-900 p-4 rounded-lg text-center ${
-                    currentTeam.Team_Leads.length === 3 && index === 2
+                    currentTeam.team_leads.length === 3 && index === 2
                       ? "lg:col-start-1 lg:col-end-3"
                       : currentTeam.name === "Management Team" ? "lg:col-start-1 lg:col-end-3" : ""
                   }`}
