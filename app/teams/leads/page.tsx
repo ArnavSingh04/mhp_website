@@ -3,11 +3,12 @@ import Image from "next/image";
 import PageSection from "../../components/PageSection";
 import teamData from "../../../public/JSONs/teams.json";
 import { TeamMember } from "../common/common";
+import { getLastRowClasses } from "../common/common";
 
 
 export default function LeadsPage() {
   /**
-   * // TODO
+   * 
    * @param teamLeads 
    * @param teamName 
    * @returns 
