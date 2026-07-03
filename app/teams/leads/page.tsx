@@ -47,7 +47,7 @@ export default function LeadsPage() {
       {/* Leads Sections */}
       <PageSection colourWay="dark">
         {/* Subteam Navigation */}
-        <nav className="flex flex-wrap gap-2 justify-center mb-10 px-8">
+        <nav className="grid grid-cols-4 gap-2 justify-items-center mb-10 px-8">
           {teamData.sub_teams.map((team) => (
             <button
               key={team.name}
@@ -56,7 +56,7 @@ export default function LeadsPage() {
                   .getElementById(toTeamId(team.name))
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="px-4 py-2 text-sm font-medium rounded-full bg-gray-900 hover:bg-green hover:text-black transition-colors"
+              className="px-6 py-3 text-base font-medium rounded-full bg-gray-900 hover:bg-green hover:text-black transition-colors"
             >
               {team.name}
             </button>
