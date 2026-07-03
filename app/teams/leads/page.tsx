@@ -94,8 +94,6 @@ export default function LeadsPage() {
                   </h4>
 
                   <p>{lead.role}</p>
-
-                  <p className="text-sm text-gray">{team.name}</p>
                 </div>
               ))}
             </div>
