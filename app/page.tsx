@@ -80,7 +80,7 @@ export default function Page() {
           </p>
           <Button
             hrefString="/bikes"
-            text="Learn More"
+            text="Check out our bikes"
             theme="dark"
             target=""
           />
