@@ -2,26 +2,10 @@
 import Image from "next/image";
 import PageSection from "../../components/PageSection";
 import teamData from "../../../public/JSONs/teams.json";
-import { TeamMember } from "../common/common";
 import { getLastRowClasses } from "../common/common";
 
 
 export default function LeadsPage() {
-  /**
-   * 
-   * @param teamLeads 
-   * @param teamName 
-   * @returns 
-   */
-  const getLeadLayoutClasses = (teamLeads: TeamMember[], teamName: string) => {
-    const isSpecialTeam = teamName === "Management Team" || teamName === "Auxiliary";
-
-    if (teamLeads.length === 2 || isSpecialTeam) return "grid grid-cols-1 md:grid-cols-2 gap-8";
-
-    if (teamLeads.length === 1) return "flex justify-center";
-
-    return "flex flex-wrap justify-center gap-6";
-  };
 
   return (
     <>
@@ -70,34 +54,27 @@ export default function LeadsPage() {
             </h2>
 
             {/* Team Leads */}
-            <div
-              className={`${getLeadLayoutClasses(
-                team.team_leads,
-                team.name
-              )} px-8`}
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-8">
               {team.team_leads?.map((lead, leadIndex) => (
                 <div
                   key={leadIndex}
-                  className="bg-gray-900 p-6 rounded-lg text-center shadow-lg"
+                  className={`bg-gray-900 rounded-lg text-center ${getLastRowClasses(team.team_leads, leadIndex)}`}
                 >
                   <Image
                     src={lead.image}
                     alt={lead.name}
-                    width={250}
-                    height={250}
-                    className="mx-auto rounded-md object-cover w-[250px] h-[180px]"
+                    width={200}
+                    height={200}
+                    className="mx-auto rounded-md object-cover w-[220px] h-[150px]"
                   />
 
-                  <h3 className="text-2xl font-bold mt-5 text-green">
+                  <h4 className="text-lg font-bold mt-4 text-green">
                     {lead.name}
-                  </h3>
+                  </h4>
 
-                  <p className="mt-2 text-lg">{lead.role}</p>
+                  <p>{lead.role}</p>
 
-                  <p className="mt-1 text-sm text-gray">
-                    {team.name}
-                  </p>
+                  <p className="text-sm text-gray">{team.name}</p>
                 </div>
               ))}
             </div>
