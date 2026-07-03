@@ -2,7 +2,7 @@
 import Image from "next/image";
 import PageSection from "../../components/PageSection";
 import teamData from "../../../public/JSONs/teams.json";  // Import single source of truth for team data
-import { getLastRowClasses } from "../common/common";
+import { getLastRowClasses, toTeamId } from "../common/common";
 
 
 export default function TeamPage() {
@@ -50,8 +50,25 @@ export default function TeamPage() {
           }}
         ></div>
 
-        {teamData.sub_teams.map((team, teamIndex) => (
-        <div key={teamIndex} className="mb-20"> 
+        {/* Subteam Navigation */}
+        <nav className="flex flex-wrap gap-2 justify-center mb-10 px-8">
+          {teamData.sub_teams.filter((team) => team.name !== "Management Team").map((team) => (
+            <button
+              key={team.name}
+              onClick={() =>
+                document
+                  .getElementById(toTeamId(team.name))
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="px-4 py-2 text-sm font-medium rounded-full bg-gray-900 hover:bg-green hover:text-black transition-colors"
+            >
+              {team.name}
+            </button>
+          ))}
+        </nav>
+
+        {teamData.sub_teams.filter((team) => team.name !== "Management Team").map((team, teamIndex) => (
+        <div key={teamIndex} id={toTeamId(team.name)} className="mb-20">
           {/* Team Title */}
           <h2 className="text-3xl font-bold text-center underline decoration-green mb-8">
             {team.name}

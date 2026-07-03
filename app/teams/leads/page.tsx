@@ -2,7 +2,7 @@
 import Image from "next/image";
 import PageSection from "../../components/PageSection";
 import teamData from "../../../public/JSONs/teams.json";
-import { getLastRowClasses } from "../common/common";
+import { getLastRowClasses, toTeamId } from "../common/common";
 
 
 export default function LeadsPage() {
@@ -36,6 +36,9 @@ export default function LeadsPage() {
               Our leadership team is composed of passionate students from a
               diverse range of engineering disciplines, driving innovation,
               collaboration, and performance across Monash Human Power.
+              <br />
+              <br />
+              {teamData.sub_teams.find((t) => t.name === "Management Team")?.description}
             </h2>
           </div>
         </section>
@@ -43,9 +46,27 @@ export default function LeadsPage() {
 
       {/* Leads Sections */}
       <PageSection colourWay="dark">
+        {/* Subteam Navigation */}
+        <nav className="flex flex-wrap gap-2 justify-center mb-10 px-8">
+          {teamData.sub_teams.map((team) => (
+            <button
+              key={team.name}
+              onClick={() =>
+                document
+                  .getElementById(toTeamId(team.name))
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="px-4 py-2 text-sm font-medium rounded-full bg-gray-900 hover:bg-green hover:text-black transition-colors"
+            >
+              {team.name}
+            </button>
+          ))}
+        </nav>
+
         {teamData.sub_teams.map((team, teamIndex) => (
           <section
             key={teamIndex}
+            id={toTeamId(team.name)}
             className="mb-20 border-b border-divborder pb-12"
           >
             {/* Team Title */}

@@ -12,6 +12,9 @@ export type TeamMember = {
 /**
  * Helper function to determine the layout for the last row
  */ 
+export const toTeamId = (name: string) =>
+  name.toLowerCase().replace(/\s+/g, "-");
+
 export const getLastRowClasses = (members: string | any[], index: number) => {
   const MEMBERS_PER_ROW = 3;
   const totalMembers = members.length;
