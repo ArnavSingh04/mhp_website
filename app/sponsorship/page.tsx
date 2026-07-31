@@ -211,13 +211,40 @@ export default function SponsorsPage() {
 
             {/* Right: Prospectus card */}
             <div className="lg:w-1/2">
-              <div className="relative rounded-xl overflow-hidden min-h-56 flex items-center justify-center">
-                <Image
+              <div 
+                className="relative rounded-xl overflow-hidden min-h-56 flex items-center justify-center"
+                style={{
+                  background: `
+                    position: absolute;
+                    width: 1176px;
+                    height: 871px;
+                    left: 0.02px;
+                    top: 3288px;
+
+                    position: absolute;
+                    width: 1153px;
+                    height: 768px;
+                    left: 0.02px;
+                    top: 3391px;
+
+                    background: linear-gradient(180deg, rgba(101, 144, 1, 0) 0%, rgba(172, 246, 1, 0.25) 134.51%, rgba(172, 246, 1, 0) 134.52%);
+
+                    position: absolute;
+                    width: 1176px;
+                    height: 812px;
+                    left: 0.02px;
+                    top: 3288px;
+
+                    background: linear-gradient(180deg, rgba(101, 144, 1, 0) 0%, rgba(172, 246, 1, 0.42) 127.29%, rgba(172, 246, 1, 0) 127.3%);
+                  `
+                }}
+              >
+                {/* <Image
                   src="/images/home_page/mhp_group.jpg"
                   fill
                   style={{ objectFit: "cover" }}
                   alt=""
-                />
+                /> */}
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 text-center px-8">
                   <p className="text-green font-bold text-sm uppercase tracking-widest mb-2">
